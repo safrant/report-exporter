@@ -77,7 +77,7 @@ public class BranchResolutionService {
 		List<String> listsOfCodes = Lists.partition(
 				getAllChildrenForBranchTopNode(code, maximum)
 				.stream()
-				.map(x -> x.getCode()).collect(Collectors.toList()), 300).stream()
+				.map(x -> x.getCode()).collect(Collectors.toList()), 100).stream()
 				.map(codes -> codes.stream()
 						.collect(Collectors.joining(","))).collect(Collectors.toList());
 		//retrieve a raw list of entities from the evs api
